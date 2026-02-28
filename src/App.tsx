@@ -1,9 +1,8 @@
-import './App.css'
-import './styles/global.scss'
+import { Button } from "./components"
 
 function App() {
   return (
-    <h1>hello world</h1>
+    <Button />
   )
 }
 export default App

@@ -1,2 +1,6 @@
-@use 'base/reset';
+@use "abstracts/tokens";
+@use "abstracts/variables";
+@use "abstracts/mixins";
 
+@use 'base/reset';
+@use 'base/typography';
