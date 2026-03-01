@@ -1,11 +1,11 @@
-import styles from "./benefitItem.module.scss"
-
+import React from 'react'
+import styles from './index.module.scss'
 interface BenefitItemProps {
     icon?: React.ReactElement
     children?: React.ReactNode
 }
 
-export function BenefitItem({ icon, children }: BenefitItemProps) {
+function BenefitItem({ icon, children }: BenefitItemProps) {
     return (
         <div className={styles.flexCenter}>
             {icon}
@@ -13,3 +13,5 @@ export function BenefitItem({ icon, children }: BenefitItemProps) {
         </div>
     )
 }
+
+export default BenefitItem

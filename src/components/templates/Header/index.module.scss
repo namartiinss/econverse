@@ -1,0 +1,42 @@
+@use '../../../styles/abstracts/tokens';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 80px;
+}
+
+.contentBenefit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 6px;
+    gap: 120px;
+}
+
+.contentSearchInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 120px;    
+    padding: 12px;
+    border-top: 1px solid #F0F0F0;
+}
+
+.contentCategories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 120px;
+    padding: 6px;
+}
+
+span {
+    color: tokens.$color-purple-light;
+    font-weight: 600;
+}

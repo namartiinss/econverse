@@ -1,0 +1,22 @@
+@use '../../../styles/abstracts/tokens';
+
+.contentSearchInput {
+    position: relative;
+    
+    .input {
+        background-color: #F6F5F2;
+        border: none;
+        border-radius: 10px;
+        color: #9F9F9F;
+        padding-left: 16px;
+        width: 630px;
+        height: 48px;
+        position: relative;
+    }
+
+    img {
+        position: absolute;
+        right: 24px;
+        top: 10px;
+    }
+}
