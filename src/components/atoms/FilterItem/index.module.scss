@@ -1,0 +1,15 @@
+@use "../../../styles/abstracts/tokens";
+
+.containerFilterItem {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+    justify-content: center;
+
+    .iconFilter {
+        padding: 34px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+}

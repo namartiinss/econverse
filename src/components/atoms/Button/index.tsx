@@ -1,9 +1,13 @@
-import styles from "./button.module.scss"
+import styles from "./index.module.scss"
 
-export function Button() {
+interface ButtonPtops {
+    nameButton?: string;
+    href?: string;
+    children?: React.ReactNode;
+}
+
+export function Button({href, children}: ButtonPtops) {
     return (
-        <button className={styles.button}>
-            Ver produto
-            </button>
+        <a href={href} className={styles.button}>{children}</a>
     )
 }

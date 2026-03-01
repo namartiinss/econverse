@@ -10,7 +10,7 @@ function BenefitItem({ icon, children }: BenefitItemProps) {
     return (
         <div className={styles.flexCenter}>
             {icon}
-            <h4 className="">{children}</h4>
+            <h5 className="">{children}</h5>
         </div>
     )
 }
