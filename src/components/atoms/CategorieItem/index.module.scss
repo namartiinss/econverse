@@ -1,0 +1,13 @@
+@use '../../../styles/abstracts/tokens';
+
+.categorieItem {
+    border: none;
+    background-color: transparent;
+    color: #9F9F9F;
+    font-weight: 600;
+    font-size: 12px;
+    gap: 12px;
+    padding: 0 12px;
+    display: flex;
+    cursor: pointer;
+}

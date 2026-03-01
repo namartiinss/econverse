@@ -1,8 +1,17 @@
 @use "../../../styles//abstracts/tokens";
 
-.containerSearchBar {
+.contentSearchBar {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    padding: 12px;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 14px;
+
+    .contentUtilities {
+        display: flex;
+        gap: 32px;
+    }
 }
