@@ -1,0 +1,8 @@
+@use '../../../styles/abstracts/tokens';
+
+.flexCenter {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    justify-content: center;
+}

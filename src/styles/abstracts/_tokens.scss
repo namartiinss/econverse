@@ -1,5 +1,3 @@
-@use "./tokens" as tokens;
-
 // White 
 $color-primary: white;
 
@@ -8,12 +6,12 @@ $color-gray-dark: #3F3F40;
 $color-gray-light: #9F9F9F;
 
 // Colors
-$color-purple: #271C47;
+$color-purple-dark: #271C47;
+$color-purple-light: #3019B2;
 $color-yellow: #F7CA11;
 $color-blue: #3442B5;
 
 // Radius 
-$border: border;
 $radius-sm: 4px;
 $radius-md: 5px;
 $radius-lg: 10px;

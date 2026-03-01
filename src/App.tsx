@@ -1,8 +1,8 @@
-import { Button } from "./components"
+import { Header } from './components/templates/Header/header';
 
 function App() {
   return (
-    <Button />
+    <Header />
   )
 }
 export default App

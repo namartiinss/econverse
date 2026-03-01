@@ -1,0 +1,11 @@
+@use '../../../styles/abstracts/tokens';
+
+.button {
+    background-color: tokens.$color-yellow;
+    border-radius: 5px;
+    color: #271c47;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 48px;
+    font-weight: 600;
+}

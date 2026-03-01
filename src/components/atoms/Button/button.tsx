@@ -1,3 +1,9 @@
+import styles from "./button.module.scss"
+
 export function Button() {
-    return <button>Botão</button>
+    return (
+        <button className={styles.button}>
+            Ver produto
+            </button>
+    )
 }
