@@ -1,6 +1,7 @@
 import Filters from "./components/molecules/Filters"
 import Hero from "./components/molecules/Hero"
 import Brands from "./components/templates/Brands"
+import Footer from "./components/templates/Footer"
 import Header from "./components/templates/Header"
 import Informations from "./components/templates/Informations"
 import Newsletter from "./components/templates/Newsletter"
@@ -17,6 +18,7 @@ function App() {
       <Brands />
       <Products />
       <Newsletter />
+      <Footer />
     </>
   )
 }

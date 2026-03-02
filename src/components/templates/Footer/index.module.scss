@@ -1,0 +1,43 @@
+@use '../../../styles/abstracts/tokens';
+
+.containerFooter {
+    width: 100%;
+    background-color: #F4F4F4;
+    padding: 42px 80px;
+
+    .contentFooter {
+        display: flex;
+        gap: 90px;
+
+        .econSocials {
+            h4 {
+                padding-top: 18px;
+            }
+
+            .iconSocials {
+                display: flex;
+                gap: 26px;
+                padding-top: 24px;
+            }
+
+            hr {
+                color: rgba(40, 40, 40, 0.18);
+            }
+        }
+
+        .econLinks {
+            display: flex;
+
+            .styles.links {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.allRights {
+    width: 100%;
+    text-align: center;
+    padding: 13px 0;
+}
