@@ -1,0 +1,18 @@
+@use '../../../styles/abstracts/tokens';
+
+.containerBrand {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+
+    h2 {
+        color: #3442B5;
+        font-weight: 700;
+    }
+
+    .contentBrand {
+        display: flex;
+        gap: 42px;
+    }
+}

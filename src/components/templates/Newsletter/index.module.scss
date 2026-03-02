@@ -1,0 +1,64 @@
+@use '../../../styles/abstracts/tokens';
+
+.containerNews {
+    width: 100%;
+    background-color: #271C47;
+
+    .contentNews {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        padding: 40px 80px;
+    }
+
+    h2 {
+        color: #FFF;
+        padding-bottom: 8px;
+    }
+
+    h4 {
+        color: #FFF;
+    }
+
+    .contentInputs {
+        display: flex;
+        gap: 8px;
+        padding-bottom: 8px;
+
+        input {
+            width: 233px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            font-size: 14px;
+            color: 676767;
+        }
+    }
+
+    .label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+
+        input[type="checkbox"] {
+            display: none; // esconde o nativo
+        }
+
+        h4 {
+            color: #FFF;
+            margin: 0;
+        }
+    }
+
+    .customCheckbox {
+        width: 15px;
+        height: 15px;
+        min-width: 15px;
+        border: 1px solid #8C342B;
+        background-color: #FFF;
+        display: inline-block;
+        position: relative;
+
+    }
+}

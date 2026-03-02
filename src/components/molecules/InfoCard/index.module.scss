@@ -1,0 +1,31 @@
+@use '../../../styles/abstracts/tokens';
+
+.contentCardPartner {
+    background-image: url('../../../assets/bgCardPartners.jpg');
+    width: 634px;
+    height: 350px;
+    border-radius: 20px;
+
+    .textPartner {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 85.04%);
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        border-radius: 20px;
+        padding-left: 44px;
+        padding-bottom: 40px;
+
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #FFF;
+        }
+
+        h3 {
+            color: #FFF;
+            padding-bottom: 32px;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@use '../../../styles/abstracts/tokens';
+
+.containerInformations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    padding-bottom: 90px;
+}
