@@ -1,14 +1,19 @@
 import styles from './index.module.scss'
 import { Button } from "../../atoms/Button"
 
-function InfoCard() {
+type InfoCardProps = {
+    title: string;
+    description: string;
+    labelButton: string;
+}
+function InfoCard({ title, description, labelButton }: InfoCardProps) {
   return (
     <div className={styles.contentCardPartner}>
       <div className={styles.textPartner}>
-        <h2 className={styles.titlePartners}>Parceiros</h2>
-        <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+        <p className={styles.titlePartners}>{title}</p>
+        <p className={styles.descriptionPartners}>{description}</p>
         <div>
-          <Button children="CONFIRA" />
+          <Button children={labelButton} />
         </div>
       </div>
     </div>

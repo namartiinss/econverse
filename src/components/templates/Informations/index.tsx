@@ -2,11 +2,26 @@ import styles from './index.module.scss'
 import InfoCard from '../../molecules/InfoCard'
 
 function Informations() {
+    const infoCardsData = [
+        {
+            title: "Parceiros",
+            description: "Lorem ipsum dolor sit amet, consectetur",
+            labelButton: "Confira",
+            id: 1
+        },
+        {
+            title: "Parceiros",
+            description: "Lorem ipsum dolor sit amet, consectetur",
+            labelButton: "Confira",
+            id: 2,
+        }
+    ]
     return (
-        <div className={styles.containerInformations}>
-            <InfoCard />
-            <InfoCard />
-        </div>
+        <section className={styles.containerInformations}>
+            {infoCardsData.map((card, index) => (
+                <InfoCard key={card.id} {...card} />
+            ))}
+        </section>
     )
 }
 

@@ -16,15 +16,18 @@
         border-radius: 20px;
         padding-left: 44px;
         padding-bottom: 40px;
-
-        h2 {
+        
+        .titlePartners {
             font-size: 40px;
             font-weight: 700;
             color: #FFF;
         }
-
-        h3 {
+        
+        .descriptionPartners {
+            max-width: 216.49px;
             color: #FFF;
+            font-size: 16px;
+            font-weight: 400;
             padding-bottom: 32px;
         }
     }
