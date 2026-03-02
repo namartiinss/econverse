@@ -1,6 +1,7 @@
 @use '../../../styles/abstracts/tokens';
 
 .button {
+    width: max-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,4 +13,10 @@
     font-weight: 600;
     text-decoration: none;
     text-align: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.button:hover {
+    background-color: #d2ab0d;
 }

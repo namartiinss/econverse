@@ -3,7 +3,6 @@ import styles from './index.module.scss';
 import Instagram from '../../../assets/instagram.svg'
 import Facebook from '../../../assets/facebook.svg'
 import LinkedIn from '../../../assets/linkedin.svg'
-import LinkFooter from '../../atoms/LinkFooter';
 import EconLinks from '../../molecules/EconLinks';
 
 

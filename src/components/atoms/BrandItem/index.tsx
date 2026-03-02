@@ -1,10 +1,13 @@
 import styles from './index.module.scss'
-import Logo from '../../../assets/logotipoEconverse.png'
 
-function BrandItem() {
+interface BrandItemProps {
+  img?: string;
+}
+
+function BrandItem({img}: BrandItemProps) {
   return (
     <div className={styles.circleBrand}>
-        <img className={styles.sizeBrand} src={Logo} alt="" />
+        <img className={styles.sizeBrand} src={img} alt="" />
     </div>
   )
 }

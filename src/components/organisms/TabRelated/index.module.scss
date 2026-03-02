@@ -1,6 +1,8 @@
 @use '../../../styles/abstracts/tokens';
 
 .containerTab {
+    max-width: 1280px;
+    margin: 0 auto;
     width: 100%;
     padding-top: 80px;
     display: flex;
