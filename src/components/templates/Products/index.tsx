@@ -1,10 +1,13 @@
 import TabRelated from '../../organisms/TabRelated'
 import SwiperProducts from '../../organisms/SwiperProducts'
-
-function Products() {
+import TabNoRelated from '../../organisms/TabNoRelated'
+type ProductsProps = {
+    hasCategories: boolean
+}
+function Products({ hasCategories }: ProductsProps) {
   return (
     <section>
-        <TabRelated />
+      {hasCategories ? <TabRelated /> : <TabNoRelated />}
         <SwiperProducts />
     </section>
   )

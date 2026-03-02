@@ -1,0 +1,44 @@
+@use '../../../styles/abstracts/tokens';
+
+.containerTab {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span{
+       margin-top: 4px;
+       font-size: 0.9375rem;
+       font-weight: tokens.$color-gray-dark;
+    }
+    .topTitle {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 34px;
+        font-size: 1.875rem;
+        justify-content: center;
+        h2 {
+            color: #3442B5;
+            font-weight: bold;
+        }
+
+        .divisor {
+            width: 100%;
+            max-width: 360px;
+            background-color: #DEDEDE;
+            height: 1px;
+        }
+    }
+
+
+    .containerRelatedProducts {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
