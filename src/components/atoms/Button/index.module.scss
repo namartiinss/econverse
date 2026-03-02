@@ -1,6 +1,9 @@
 @use '../../../styles/abstracts/tokens';
 
 .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: tokens.$color-yellow;
     border-radius: 5px;
     color: #271c47;
