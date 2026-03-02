@@ -5,4 +5,8 @@
     color: #222222;
     font-family: "Work sans";
     font-size: 14px;
+
+    &:hover{
+        color: tokens.$color-purple-light;
+    }
 }

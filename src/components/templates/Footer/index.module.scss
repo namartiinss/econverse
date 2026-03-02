@@ -3,11 +3,18 @@
 .containerFooter {
     width: 100%;
     background-color: #F4F4F4;
-    padding: 42px 80px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 42px 0px;
+
 
     .contentFooter {
         display: flex;
         gap: 90px;
+        justify-content: center;
+        max-width: 1280px;
+        margin: 0 auto;
+        justify-content: space-between;
 
         .econSocials {
             h4 {
