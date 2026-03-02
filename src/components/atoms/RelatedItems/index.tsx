@@ -8,7 +8,7 @@ function RelatedItems({ nameRelated }: RelatedItemsProps) {
     return (
         <div>
             <button className={styles.buttonItemsRelated}>
-                <h3>{nameRelated}</h3>
+                <h3 className={styles.relatedColors}>{nameRelated}</h3>
             </button>
         </div>
     )
