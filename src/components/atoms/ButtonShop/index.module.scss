@@ -10,4 +10,10 @@
     text-decoration: none;
     padding-top: 12px;
     text-align: center;
+    cursor: pointer;
 }
+
+    .buttonShop:hover {
+        background-color: #253398;
+        transition: .2s;
+    }

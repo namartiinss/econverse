@@ -1,10 +1,14 @@
-import styles from './index.module.scss'
+import styles from './index.module.scss';
 
-function ButtonShop() {
+interface ButtonShopProps {
+  onClick?: () => void
+}
+
+function ButtonShop({ onClick }: ButtonShopProps) {
   return (
-    <a href="" className={styles.buttonShop}>
-        COMPRAR
-    </a>
+    <button onClick={onClick} className={styles.buttonShop}>
+      COMPRAR
+    </button>
   )
 }
 
