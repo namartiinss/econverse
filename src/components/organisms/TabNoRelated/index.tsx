@@ -10,7 +10,7 @@ function TabNoRelated() {
                 <div className={styles.divisor}></div>
             </div>
 
-            <span>Ver todos</span>
+            <a href='#'>Ver todos</a>
         </section>
     )
 }
