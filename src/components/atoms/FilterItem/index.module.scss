@@ -6,14 +6,45 @@
     gap: 22px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: .3s ease;
+
+    img {
+        transition: .3s ease;
+    }
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+    &:not(.active):hover {
+        h3 {
+            color: tokens.$color-purple-light;
+        }
+
+        img {
+            filter: brightness(0) saturate(100%) invert(13%) sepia(89%) saturate(4000%) hue-rotate(240deg) brightness(90%);
+        }
+    }
+
+
+    h3 {
+        font-size: 14px;
+        font-weight: 600;
+    }
 
     .iconFilter {
         padding: 34px;
         border-radius: 10px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
+}
 
-    h4 {
-        font-size: 16px;
+.active {
+    h3 {
+        color: tokens.$color-purple-light;
+    }
+
+    img:hover {
+        filter: none;
     }
 }

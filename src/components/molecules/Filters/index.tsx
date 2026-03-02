@@ -9,15 +9,40 @@ import Fitness from '../../../assets/run.png'
 import Fashion from '../../../assets/fashion.png'
 
 function Filters() {
+    const filters = [
+        {
+            iconItem: Tech,
+            iconName: 'Tecnologia',
+            active: true,
+        },
+        {
+            iconItem: Market,
+            iconName: 'Supermercado',
+        },
+        {
+            iconItem: Drinks,
+            iconName: 'Bebidas',
+        },
+        {
+            iconItem: Tools,
+            iconName: 'Ferramentas',
+        },
+        {
+            iconItem: Health,
+            iconName: 'Saúde',
+        },{
+            iconItem: Fitness,
+            iconName: 'Esporte e fitness',
+        },{
+            iconItem: Fashion,
+            iconName: 'Moda',
+        }
+    ]
     return (
         <div className={styles.containerFilters}>
-            <FilterItem iconItem={<img src={Tech}></img>} iconName='Tecnologia' />
-            <FilterItem iconItem={<img src={Market}></img>} iconName='Supermercado' />
-            <FilterItem iconItem={<img src={Drinks}></img>} iconName='Bebidas' />
-            <FilterItem iconItem={<img src={Tools}></img>} iconName='Ferramentas' />
-            <FilterItem iconItem={<img src={Health}></img>} iconName='Saúde' />
-            <FilterItem iconItem={<img src={Fitness}></img>} iconName='Esporte e fitness' />
-            <FilterItem iconItem={<img src={Fashion}></img>} iconName='Moda' /> 
+            {filters.map((filter, index) => (
+                <FilterItem key={index} active={filter.active} iconItem={filter.iconItem} alt={filter.iconName} iconName={filter.iconName} />
+            ))}
         </div>
     )
 }
