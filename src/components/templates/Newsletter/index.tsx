@@ -9,10 +9,10 @@ function Newsletter() {
                     <h2>
                         Inscreva-se na nossa newsletter
                     </h2>
-                    <h4>
+                    <p>
                         Assine a nossa newsletter e receba as
                         novidades e conteúdos exclusivos da Econverse.
-                    </h4>
+                    </p>
                 </div>
                 <div>
                     <div className={styles.contentInputs}>
@@ -23,7 +23,7 @@ function Newsletter() {
                     <label className={styles.label}>
                         <input className={styles.checkbox} type="checkbox" value="" />
                         <span className={styles.customCheckbox} />
-                        <h4>Aceito os termos e condições</h4>
+                        <span>Aceito os termos e condições</span>
                     </label>
                 </div>
             </div>

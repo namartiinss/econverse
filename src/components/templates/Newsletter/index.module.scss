@@ -14,12 +14,16 @@
     h2 {
         color: #FFF;
         padding-bottom: 8px;
-        font-size: 40px;
+        font-size: 2rem;
         font-family: "Outfit";
+        font-weight: 600;
     }
 
-    h4 {
+    p {
         color: #FFF;
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 18px;
     }
 
     .contentInputs {
@@ -62,5 +66,40 @@
         display: inline-block;
         position: relative;
 
+    }
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+        display: none;
+
+        &:checked + .customCheckbox {
+            background-color: tokens.$color-purple-light;
+            border-color: tokens.$color-purple-light;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 4px;
+                top: 1px;
+                width: 5px;
+                height: 9px;
+                border: 2px solid #FFF;
+                border-top: none;
+                border-left: none;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    span {
+        color: #FFF;
+        margin: 0;
+        font-weight: 400;
     }
 }
