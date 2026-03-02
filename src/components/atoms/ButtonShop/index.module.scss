@@ -1,0 +1,13 @@
+@use '../../../styles/abstracts/tokens';
+
+.buttonShop {
+    background-color: tokens.$color-blue;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    padding: 12px 72px;
+    font-weight: 600;
+    text-decoration: none;
+    padding-top: 12px;
+    text-align: center;
+}

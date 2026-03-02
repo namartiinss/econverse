@@ -5,11 +5,11 @@ import CategoriesBar from '../../molecules/CategoriesBar';
 
 function Header() {
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <BenefitBar />
             <SearchBar />
             <CategoriesBar />
-        </div>
+        </section>
     )
 }
 
