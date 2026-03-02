@@ -9,13 +9,19 @@
 
     .relatedColors {
         color: #3B3B3B;
+        font-size: 1rem;
+        font-weight: 600;
     }
 
     .relatedColors:hover {
         color: #3442B5;
     }
 }
-
+.active{
+       .relatedColors {
+        color: tokens.$color-purple-light;
+    }
+}
 .buttonItemsRelated:hover,
 .buttonItemsRelated:active {
     border: 1px solid #3442B5;

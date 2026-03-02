@@ -3,10 +3,10 @@ import SwiperProducts from '../../organisms/SwiperProducts'
 
 function Products() {
   return (
-    <div>
+    <section>
         <TabRelated />
         <SwiperProducts />
-    </div>
+    </section>
   )
 }
 

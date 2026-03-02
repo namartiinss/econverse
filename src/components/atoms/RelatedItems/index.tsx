@@ -2,16 +2,15 @@ import styles from './index.module.scss';
 
 interface RelatedItemsProps {
     nameRelated?: string;
+    active?: boolean;
 }
 
-function RelatedItems({ nameRelated }: RelatedItemsProps) {
+function RelatedItems({ nameRelated, active }: RelatedItemsProps) {
     return (
-        <div>
-            <button className={styles.buttonItemsRelated}>
-                <h3 className={styles.relatedColors}>{nameRelated}</h3>
-            </button>
-        </div>
-    )
+        <button className={`${styles.buttonItemsRelated} ${active ? styles.active : ''}`}>
+            <span className={styles.relatedColors}>{nameRelated}</span>
+        </button>
+        )
 }
 
 export default RelatedItems

@@ -2,6 +2,32 @@ import RelatedItems from '../../atoms/RelatedItems'
 import styles from './index.module.scss'
 
 function TabRelated() {
+  const relatedProducts = [
+    {
+      nameRelated: 'CELULAR',
+      active: true,
+    },
+    {
+      nameRelated: 'ACESSÓRIOS',
+      active: false,
+    },
+    {
+      nameRelated: 'TABLETS',
+      active: false,
+    },
+    {
+      nameRelated: 'NOTEBOOKS',
+      active: false,
+    },
+    {
+      nameRelated: 'TVS',
+      active: false,
+    },
+    {
+      nameRelated: 'TODOS',
+      active: false,
+    },
+  ]
   return (
     <section className={styles.containerTab}>
       <div>
@@ -11,12 +37,9 @@ function TabRelated() {
           <div className={styles.divisor}></div>
         </div>
         <div className={styles.containerRelatedProducts}>
-          <RelatedItems nameRelated='CELULAR' />
-          <RelatedItems nameRelated='ACESSÓRIOS' />
-          <RelatedItems nameRelated='TABLETS' />
-          <RelatedItems nameRelated='NOTEBOOKS' />
-          <RelatedItems nameRelated='TVS' />
-          <RelatedItems nameRelated='TODOS' />
+          {relatedProducts.map((related, index) => (
+            <RelatedItems key={index} active={related.active} nameRelated={related.nameRelated} />
+          ))}
         </div>
       </div>
     </section>
