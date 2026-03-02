@@ -1,25 +1,58 @@
 import styles from './index.module.scss'
 import ButtonShop from '../../atoms/ButtonShop'
-import ProductImg from '../../../assets/produtoCell.png'
+import ProductModal from '../ProductModal'
+import { createPortal } from 'react-dom'
+import { useState } from 'react'
 
-function ProductCard() {
-    return (
-        <div className={styles.contentCard}>
-            <div>
-                <img src={ProductImg} alt="Imagem de Iphone 14 Pro Max" />
-            </div>
-            <div className={styles.infoProduct}>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                <div>
-                    <h3 className={styles.sale}>R$ 30,90</h3>
-                    <p className={styles.price}>R$ 28,90</p>
-                    <h5>ou 2x de R$ 49,95 sem juros</h5>
-                </div>
-                <span>Frete grátis</span>
-            </div>
-            <ButtonShop />
-        </div>
-    )
+interface ProductCardProps {
+    productName: string
+    descriptionShort: string
+    photo: string
+    price: number
 }
 
+function ProductCard({ productName, descriptionShort, photo, price }: ProductCardProps) {
+    const installment = (price / 2).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    const formattedPrice = price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    const [modalOpen, setModalOpen] = useState(false)
+
+    return (
+        <>
+
+            <div className={styles.contentCard}>
+                <div>
+                    <img src={photo} alt={productName} />
+                </div>
+                <div className={styles.infoProduct}>
+                    <h3>{descriptionShort}</h3>
+                    <div>
+                        <p className={styles.price}>{formattedPrice}</p>
+                        <h5>ou 2x de {installment} sem juros</h5>
+                    </div>
+                    <span>Frete grátis</span>
+                </div>
+                <ButtonShop onClick={() => setModalOpen(true)}/>
+            </div>
+
+            {modalOpen && createPortal(
+                <ProductModal
+                    productName={productName}
+                    photo={photo}
+                    price={price}
+                    onClose={() => setModalOpen(false)}
+                />,
+                document.body
+            )}</>
+    )
+}
 export default ProductCard
+
+
+
+
+
+
+
+
+
+
