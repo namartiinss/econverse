@@ -11,7 +11,7 @@ function BenefitItem({ icon, alt, children }: BenefitItemProps) {
     return (
         <div className={styles.flexCenter}>
             <img src={icon} alt={alt} />
-            <h5>{children}</h5>
+            <span>{children}</span>
         </div>
     )
 }

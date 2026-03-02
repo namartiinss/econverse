@@ -1,5 +1,6 @@
 import styles from './index.module.scss'
 import CategorieItem from '../../atoms/CategorieItem'
+import { act } from 'react'
 
 function CategoriesBar() {
     const categories = [
@@ -31,7 +32,8 @@ function CategoriesBar() {
         {
             id: 6,
             name: "OFERTAS DO DIA",
-            iconCrwon: false
+            iconCrwon: false,
+            active: true
         },
         {
             id: 7,
@@ -48,6 +50,7 @@ function CategoriesBar() {
                         key={categorie.id}
                         name={categorie.name}
                         iconCrown={categorie.iconCrwon}
+                        active={categorie.active}
                     />
                 ))}
             </div>

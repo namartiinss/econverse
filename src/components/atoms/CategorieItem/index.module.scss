@@ -9,13 +9,14 @@
     display: flex;
 
     span {
+        font-weight: 600;
         color: gray;
         cursor: pointer;
         transition: color 0.2s;
     }
 
     span:hover,
-    span:active {
+    span.active {
         color: #3442B5;
     }
 }

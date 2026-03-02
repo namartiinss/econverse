@@ -3,11 +3,16 @@
 .contentBenefit {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 6px;
+    max-width: 764px;
+    width: 100%;
 }
 
 span {
-    color: tokens.$color-purple-light;
     font-weight: 600;
+    strong {
+        font-weight: inherit;
+        color: tokens.$color-purple-light;
+    }
 }

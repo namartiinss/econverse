@@ -5,28 +5,30 @@ import CreditCard from "../../../assets/creditCard.svg";
 import BenefitItem from '../../atoms/BenefitItem';
 
 function BenefitBar() {
-    const benefits = [
+    const benefits: { id: number; icon: string; alt: string; text: React.ReactNode }[] = [
         {
             id: 1,
             icon: Shield,
-            text: "Compra 100% segura",
+            alt: "Compra 100% segura",
+            text: <>Compra <strong>100% segura</strong></>,
         },
         {
             id: 2,
             icon: Truck,
-            text: "Frete grátis acima de R$200",
+            alt: "Frete grátis acima de R$200",
+            text: <><strong>Frete grátis</strong> acima de R$200</>,
         },
         {
             id: 3,
             icon: CreditCard,
-            text: "Parcele suas compras",
+            alt: "Parcele suas compras",
+            text: <><strong>Parcele</strong> suas compras</>,
         }
     ]
-
     return (
         <div className={styles.contentBenefit}>
             {benefits.map((benefit) => (
-                <BenefitItem key={benefit.id} icon={benefit.icon} alt={benefit.text}>
+                <BenefitItem key={benefit.id} icon={benefit.icon} alt={benefit.alt}>
                     {benefit.text}
                 </BenefitItem>
             ))}
