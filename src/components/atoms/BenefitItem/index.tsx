@@ -2,15 +2,16 @@ import React from 'react'
 import styles from './index.module.scss'
 
 interface BenefitItemProps {
-    icon?: React.ReactElement
+    icon: string
+    alt?: string
     children?: React.ReactNode
 }
 
-function BenefitItem({ icon, children }: BenefitItemProps) {
+function BenefitItem({ icon, alt, children }: BenefitItemProps) {
     return (
         <div className={styles.flexCenter}>
-            {icon}
-            <h5 className="">{children}</h5>
+            <img src={icon} alt={alt} />
+            <h5>{children}</h5>
         </div>
     )
 }

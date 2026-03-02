@@ -5,17 +5,31 @@ import CreditCard from "../../../assets/creditCard.svg";
 import BenefitItem from '../../atoms/BenefitItem';
 
 function BenefitBar() {
+    const benefits = [
+        {
+            id: 1,
+            icon: Shield,
+            text: "Compra 100% segura",
+        },
+        {
+            id: 2,
+            icon: Truck,
+            text: "Frete grátis acima de R$200",
+        },
+        {
+            id: 3,
+            icon: CreditCard,
+            text: "Parcele suas compras",
+        }
+    ]
+
     return (
         <div className={styles.contentBenefit}>
-            <BenefitItem icon={<img src={Shield} alt="Compra segura" />}>
-                Compra<span> 100% segura</span>
-            </BenefitItem>
-            <BenefitItem icon={<img src={Truck} alt="Compra segura" />}>
-                <span>Frete grátis</span> acima de R$ 200
-            </BenefitItem>
-            <BenefitItem icon={<img src={CreditCard} alt="Compra segura" />}>
-                <span>Parcele</span> suas compras
-            </BenefitItem>
+            {benefits.map((benefit) => (
+                <BenefitItem key={benefit.id} icon={benefit.icon} alt={benefit.text}>
+                    {benefit.text}
+                </BenefitItem>
+            ))}
         </div>
     )
 }

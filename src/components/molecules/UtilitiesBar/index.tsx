@@ -1,17 +1,35 @@
+import UtilityIcon from "../../atoms/UtilityIcon"
 import styles from "./index.module.scss"
+import Delivery from "../../../assets/delivery.svg"
+import Heart from "../../../assets/heart.svg"
+import User from "../../../assets/userCircle.svg"
+import Cart from "../../../assets/shoppingCart.svg"
 
-interface UtilitiesProps {
-    utilityIcon?: React.ReactElement
-    utilityLink?: React.ReactNode
-}
+export function Utilities() {
+    const utilitiesIcons = [
+        {
+            id: 1,
+            icon: Delivery,
+        },
+        {
+            id: 2,
+            icon: Heart,
+        },
+        {
+            id: 3,
+            icon: User,
+        },
+        {
+            id: 4,
+            icon: Cart
+        }
+    ]
 
-export function Utilities({ utilityIcon, utilityLink }: UtilitiesProps) {
     return (
         <>
-            <button className={styles.buttonIcon}>
-                {utilityIcon}
-                {utilityLink}
-            </button>
+            {utilitiesIcons.map((Utilities) => (
+                <UtilityIcon key={Utilities.id} icon={Utilities.icon}/>
+            ))}
         </>
     )
 }

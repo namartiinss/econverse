@@ -1,7 +1,11 @@
 @use '../../../styles/abstracts/tokens';
 
-.contentCategoriesBar {
+.containerCategoriesBar {
+    max-width: 1280px;
     width: 100%;
+}
+
+.contentCategoriesBar {
     padding: 10px 65px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     display: flex;

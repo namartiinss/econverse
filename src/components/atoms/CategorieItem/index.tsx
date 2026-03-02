@@ -1,18 +1,17 @@
 //import React from 'react'
 import styles from './index.module.scss'
+import Crown from '../../../assets/crownSimple.svg'
 
 interface CategorieItemProps {
   name?: string;
-  iconCrown?: React.ReactNode
+  iconCrown?: boolean
 }
 
-function CategorieItem({name, iconCrown}: CategorieItemProps) {
+function CategorieItem({ name, iconCrown }: CategorieItemProps) {
   return (
-    <div>
-      <button className={styles.categorieItem}>
-        {iconCrown}
-        {name}
-      </button>
+    <div className={styles.categorieItem}>
+      {iconCrown && <img src={Crown} alt="crown" />}
+      <span>{name}</span>
     </div>
   )
 }
