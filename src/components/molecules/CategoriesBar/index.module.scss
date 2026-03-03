@@ -11,4 +11,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1024px) {
+        padding: 10px 24px;
+    }
+
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px 16px;
+        justify-content: center;
+    }
 }
