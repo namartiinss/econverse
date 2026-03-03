@@ -9,25 +9,29 @@ export function Utilities() {
         {
             id: 1,
             icon: Delivery,
+            alt: "Ícone de entrega"
         },
         {
             id: 2,
             icon: Heart,
+            alt: "Ícone de favoritos"
         },
         {
             id: 3,
             icon: User,
+            alt: "Ícone de usuário"
         },
         {
             id: 4,
-            icon: Cart
+            icon: Cart,
+            alt: "Ícone de carrinho"
         }
     ]
 
     return (
         <>
-            {utilitiesIcons.map((Utilities) => (
-                <UtilityIcon key={Utilities.id} icon={Utilities.icon}/>
+            {utilitiesIcons.map((utilities) => (
+                <UtilityIcon key={utilities.id} alt={utilities.alt} icon={utilities.icon}/>
             ))}
         </>
     )
