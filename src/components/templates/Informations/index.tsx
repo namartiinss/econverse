@@ -6,13 +6,13 @@ function Informations() {
         {
             title: "Parceiros",
             description: "Lorem ipsum dolor sit amet, consectetur",
-            labelButton: "Confira",
+            labelButton: "CONFIRA",
             id: 1
         },
         {
             title: "Parceiros",
             description: "Lorem ipsum dolor sit amet, consectetur",
-            labelButton: "Confira",
+            labelButton: "CONFIRA",
             id: 2,
         }
     ]
