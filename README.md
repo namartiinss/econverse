@@ -1,31 +1,62 @@
-# Teste Econverse: Vaga Desenvolvedor Front-End
+# EconVerse - Teste FrontEnd
 
-### Vem ser #Econverse!
+[Colocar imagem]
 
-Segue abaixo as instruções para a execução do teste.
+Projeto front-end para o teste técnico da Econverse.
 
-## Instruções
-- Faça um fork desse projeto para a sua conta pessoal do GitHub.
-- Desenvolva a página conforme as **Especificações Técnicas** 
-- Crie um README com as instruções para compilar, testar e rodar o projeto.
-- O link do repositório deverá ser enviado para o e-mail ana.nascimento@econverse.com.br com o título **Teste Vaga FrontEnd**
+**Resumo:**
+ - Implementação em React com Vite + TypeScript, estrutura de componentes atômicos/moleculares/organismos e estilização em SCSS.
 
-## Especificações Técnicas
-- Desenvolver a pagina em React e TypeScript conforme o [layout](https://www.figma.com/file/rWnzPeoxgynuNPsJjV0VmV/Teste-Front-End-Jr?node-id=0%3A1). Para conseguir pegar os elementos do Figma, basta copiar o layout para sua conta que terá acesso de edição.
-- Montar a [vitrine](https://app.econverse.com.br/teste-front-end/junior/tecnologia/layout/vitrine-produtos.png) de produtos consumindo as informações dos produtos em json atraves desse [Link](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json).
-- Desenvolver a interação ao clicar em um produto conforme layout. A interação consiste em abrir um modal com as principais informações do produto presente no arquivo [JSON](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json) conforme o produto que clicar.
-- Utilizar Pré-processador Sass, Less ou Stylus.
-- Respeitar o Layout pixel a pixel, tamanho das fontes, cores e botões.
-- Não Utilizar bibliotecas UI como Bootstrap, Foundation, ou afins.
+**Tecnologias principais:**
+ - React 19
+ - Vite
+ - TypeScript
+ - Sass (SCSS)
+ - ESLint
+ - Swiper
 
-## Pontos Extras
-- Utilizar Boas práticas de SEO
-- Uso de HTML semântico
+**Como rodar (desenvolvimento):**
+1. Instale as dependências:
 
-## O que avaliaremos em seu teste
-- Organização do projeto
-- Lógica do código
-- Componentização
-- Alcance dos objetivos propostos
+```bash
+npm install
+```
 
-**Boa sorte! ;)**
+2. Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+3. Abra o navegador em http://localhost:5173 (Vite mostrará a porta se for diferente).
+
+**Build e preview (produção):**
+
+```bash
+npm run build
+npm run preview
+```
+
+**Scripts disponíveis:**
+ - `dev`: inicia o servidor Vite em modo desenvolvimento.
+ - `build`: compila TypeScript (`tsc -b`) e gera o build do Vite.
+ - `preview`: serve o build gerado localmente via Vite.
+ - `lint`: executa o ESLint (`eslint .`).
+
+**Estrutura principal do projeto (resumo):**
+ - `src/` - código fonte
+	 - `components/` - componentes organizados por átomos, moléculas, organismos e templates
+	 - `hooks/` - hooks personalizados (ex.: `useProducts.ts`)
+	 - `styles/` - SCSS globais, tokens e mixins
+	 - `assets/` - imagens e recursos estáticos
+	 - `page/` - páginas (ex.: `home`)
+
+**Pontos importantes sobre o código:**
+ - Organização por atomic design facilita reuso de componentes.
+ - Estilização escrita em SCSS modular (module.scss em componentes).
+ - O projeto usa TypeScript; o build roda `tsc -b` antes do `vite build`.
+ - `swiper` é usado para carrosséis em `organisms/SwiperProducts`.
+
+**Ambiente / Pré-requisitos:**
+ - Node.js (recomendado >= 18)
+ - npm 9+ ou yarn (os comandos aqui usam `npm`)
