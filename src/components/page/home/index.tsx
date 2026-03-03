@@ -11,14 +11,16 @@ function Home() {
     return (
         <>
             <Header />
-            <Hero />
-            <Filters />
-            <Products hasCategories={true} />
-            <Informations />
-            <Products hasCategories={false} />
-            <Brands />
-            <Products hasCategories={false} />
-            <Newsletter />
+            <main>
+                <Hero />
+                <Filters />
+                <Products hasCategories={true} />
+                <Informations />
+                <Products hasCategories={false} />
+                <Brands />
+                <Products hasCategories={false} />
+                <Newsletter />
+            </main>
             <Footer />
         </>
     )

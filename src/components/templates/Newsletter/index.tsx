@@ -3,7 +3,7 @@ import { Button } from "../../atoms/Button"
 
 function Newsletter() {
     return (
-        <div className={styles.containerNews}>
+        <section className={styles.containerNews}>
             <div className={styles.contentNews}>
                 <div>
                     <h2>
@@ -27,7 +27,7 @@ function Newsletter() {
                     </label>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
