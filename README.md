@@ -48,6 +48,13 @@ O projeto foi validado utilizando o **Google PageSpeed Insights**, considerando 
 1. Instale as dependências:
 
 ```bash
+git clone https://github.com/namartiinss/econverse.git
+```
+```bash
+cd econverse
+```
+
+```bash
 npm install
 ```
 
