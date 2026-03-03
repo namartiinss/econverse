@@ -1,26 +1,41 @@
 @use '../../../styles/abstracts/tokens';
 
 .containerTab {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     width: 100%;
     padding-top: 90px;
+    padding-left: 80px;
+    padding-right: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    a{
-       margin-top: 4px;
-       font-size: 0.9375rem;
-       color: tokens.$color-gray-dark;
-       text-decoration: none;
-       font-weight: 700;
-        transition: .2s ease-in-out;
-       &:hover {
-        color: tokens.$color-purple-light;
-       }
+    @media (max-width: 1024px) {
+        padding-left: 40px;
+        padding-right: 40px;
     }
+
+    @media (max-width: 768px) {
+        padding-top: 48px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    a {
+        margin-top: 4px;
+        font-size: 0.9375rem;
+        color: tokens.$color-gray-dark;
+        text-decoration: none;
+        font-weight: 700;
+        transition: .2s ease-in-out;
+
+        &:hover {
+            color: tokens.$color-purple-light;
+        }
+    }
+
     .topTitle {
         display: flex;
         align-items: center;
@@ -28,9 +43,19 @@
         gap: 34px;
         font-size: 1.875rem;
         justify-content: center;
+
+        @media (max-width: 768px) {
+            gap: 16px;
+        }
+
         h2 {
             color: #3442B5;
             font-weight: bold;
+            white-space: nowrap;
+
+            @media (max-width: 768px) {
+                font-size: 1.25rem;
+            }
         }
 
         .divisor {
@@ -38,13 +63,22 @@
             max-width: 360px;
             background-color: #DEDEDE;
             height: 1px;
+
+            @media (max-width: 480px) {
+                display: none;
+            }
         }
     }
-
 
     .containerRelatedProducts {
         width: 100%;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
     }
 }
