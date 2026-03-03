@@ -7,7 +7,7 @@ interface ButtonShopProps {
 function ButtonShop({ onClick }: ButtonShopProps) {
   return (
     <button onClick={onClick} className={styles.buttonShop}>
-      COMPRAR
+      Comprar
     </button>
   )
 }

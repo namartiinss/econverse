@@ -13,7 +13,7 @@ function FilterItem({ iconItem, iconName, alt, active }: FilterItemProps) {
             <div className={styles.iconFilter}>
                 <img src={iconItem as string} alt={alt} />
             </div>
-            <h3>{iconName}</h3>
+            <h4>{iconName}</h4>
         </div>
     )
 }

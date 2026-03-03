@@ -18,7 +18,8 @@
     }
 
     &:not(.active):hover {
-        h3 {
+
+        h4 {
             color: tokens.$color-purple-light;
         }
 
@@ -27,7 +28,7 @@
         }
     }
 
-    h3 {
+    h4 {
         font-size: 14px;
         font-weight: 600;
 
@@ -37,6 +38,9 @@
     }
 
     .iconFilter {
+        width: 128px;
+        height: 128px;
+        background-color: #F4F4F4;
         padding: 34px;
         border-radius: 10px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -48,11 +52,16 @@
         @media (max-width: 480px) {
             padding: 16px;
         }
+
     }
 }
 
 .active {
-    h3 {
+    h4 {
         color: tokens.$color-purple-light;
+    }
+
+    .iconFilter {
+        background-color: #FFF;
     }
 }
