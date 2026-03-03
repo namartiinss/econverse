@@ -8,9 +8,19 @@
         display: flex;
         justify-content: center;
         gap: 80px;
-        padding: 40px 0px;
-        max-width: 1280px;
+        padding: 40px 24px;
+        max-width: 1304px;
         margin: 0 auto;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            gap: 24px;
+            padding: 32px 24px;
+
+            a {
+                width: 100%;
+            }
+        }
     }
 
     h2 {
@@ -19,6 +29,10 @@
         font-size: 2rem;
         font-family: "Outfit";
         font-weight: 600;
+
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+        }
     }
 
     p {
@@ -33,13 +47,21 @@
         gap: 8px;
         padding-bottom: 8px;
 
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
         input {
             width: 233px;
             padding: 12px 24px;
             border-radius: 8px;
             border: none;
             font-size: 14px;
-            color: 676767;
+            color: #676767;
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
         }
     }
 
@@ -50,12 +72,31 @@
         cursor: pointer;
 
         input[type="checkbox"] {
-            display: none; // esconde o nativo
+            display: none;
+
+            &:checked+.customCheckbox {
+                background-color: tokens.$color-purple-light;
+                border-color: tokens.$color-purple-light;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 4px;
+                    top: 1px;
+                    width: 5px;
+                    height: 9px;
+                    border: 2px solid #FFF;
+                    border-top: none;
+                    border-left: none;
+                    transform: rotate(45deg);
+                }
+            }
         }
 
-        h4 {
+        span {
             color: #FFF;
             margin: 0;
+            font-weight: 400;
         }
     }
 
@@ -67,41 +108,5 @@
         background-color: #FFF;
         display: inline-block;
         position: relative;
-
-    }
-}
-
-.label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-
-    input[type="checkbox"] {
-        display: none;
-
-        &:checked + .customCheckbox {
-            background-color: tokens.$color-purple-light;
-            border-color: tokens.$color-purple-light;
-
-            &::after {
-                content: '';
-                position: absolute;
-                left: 4px;
-                top: 1px;
-                width: 5px;
-                height: 9px;
-                border: 2px solid #FFF;
-                border-top: none;
-                border-left: none;
-                transform: rotate(45deg);
-            }
-        }
-    }
-
-    span {
-        color: #FFF;
-        margin: 0;
-        font-weight: 400;
     }
 }
