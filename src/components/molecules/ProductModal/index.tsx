@@ -24,7 +24,6 @@ function ProductModal({ productName, photo, price, onClose }: ProductModalProps)
                     <div>
                         <h5 className={styles.details}>
                             Many desktop publishing packages and
-                            <br />
                             web page editors now many desktop publishing
                         </h5>
                         <div className={styles.arrowRight}>
