@@ -2,7 +2,7 @@
 
 .contentSearchInput {
     position: relative;
-    
+
     .input {
         background-color: #F6F5F2;
         border: none;
@@ -12,6 +12,12 @@
         width: 630px;
         height: 48px;
         position: relative;
+
+    }
+
+    @media(max-width: 1200px) {
+        width: 100%;
+        margin-left: 14px;
     }
 
     img {

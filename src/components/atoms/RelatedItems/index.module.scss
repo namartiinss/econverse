@@ -1,11 +1,16 @@
 @use '../../../styles/abstracts/tokens';
 
 .buttonItemsRelated {
-    padding: 12px 70px;
     background-color: transparent;
     border: 1px solid #BDBDBD;
     cursor: pointer;
     transition: .2s;
+    height: 40px;
+    width: 214px;
+
+    @media(max-width: 1300px) {
+        width: 150px;
+    }
 
     .relatedColors {
         color: #3B3B3B;
@@ -17,11 +22,13 @@
         color: #3442B5;
     }
 }
-.active{
-       .relatedColors {
+
+.active {
+    .relatedColors {
         color: tokens.$color-purple-light;
     }
 }
+
 .buttonItemsRelated:hover,
 .buttonItemsRelated:active {
     border: 1px solid #3442B5;

@@ -17,7 +17,7 @@ function Home() {
             <Informations />
             <Products hasCategories={false} />
             <Brands />
-            <Products hasCategories={false} /> 
+            <Products hasCategories={false} />
             <Newsletter />
             <Footer />
         </>

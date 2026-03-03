@@ -6,7 +6,8 @@
     justify-content: center;
     gap: 13px;
     padding: 0 80px;
-
+    max-width: 1440px;
+    margin: 0 auto;
     @media (max-width: 1024px) {
         padding: 0 40px;
     }

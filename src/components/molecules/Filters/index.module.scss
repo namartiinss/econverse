@@ -7,8 +7,10 @@
     justify-content: center;
     gap: 42px;
     padding-top: 40px;
-    max-width: 1160px;
+    max-width: 1240px;
     margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
 
     @media (max-width: 1024px) {
         gap: 24px;
