@@ -5,4 +5,14 @@
     align-items: center;
     justify-content: center;
     gap: 13px;
+    padding: 0 80px;
+
+    @media (max-width: 1024px) {
+        padding: 0 40px;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 0 24px;
+    }
 }
