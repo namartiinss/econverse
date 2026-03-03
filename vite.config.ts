@@ -5,10 +5,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': {
+      '/api/produtos': {
         target: 'https://app.econverse.com.br',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+        rewrite: () => '/teste-front-end/junior/tecnologia/lista-produtos/produtos.json'
       }
     }
   }

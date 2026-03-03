@@ -57,6 +57,26 @@ npm run preview
  - O projeto usa TypeScript; o build roda `tsc -b` antes do `vite build`.
  - `swiper` é usado para carrosséis em `organisms/SwiperProducts`.
 
+### **SEO e Acessibilidade**
+
+* **Meta tags básicas:**
+  Foram definidas as tags `title` e `meta description` no `index.html`
+
+* **Open Graph / Twitter Cards:**
+  Foram adicionadas as meta tags `og:title`, `og:description`, `og:image`, `twitter:card` e `twitter:image` para otimizar o compartilhamento em redes sociais. As imagens de preview foram disponibilizadas na pasta `public/`.
+
+* **Canonical & Robots:**
+  Foi adicionada a tag `<link rel="canonical">` onde necessário e mantidos atualizados os arquivos `public/robots.txt` e `public/sitemap.xml`.
+
+* **Structured Data (JSON-LD):**
+  Foi implementada marcação estruturada `application/ld+json` utilizando schemas como `Product`, `Organization` e `BreadcrumbList` para melhor compreensão pelos motores de busca.
+
+* **Acessibilidade (a11y):**
+  Foram utilizados textos alternativos (`alt`) em imagens, markup semântico adequado e contraste acessível. O projeto foi validado com ferramentas como axe e Lighthouse para melhoria da experiência do usuário e indexação.
+
+* **Arquitetura (CSR):**
+  O projeto foi desenvolvido como aplicação client-side utilizando Vite + React, garantindo carregamento otimizado e estrutura escalável.
+
 **Ambiente / Pré-requisitos:**
  - Node.js (recomendado >= 18)
  - npm 9+ ou yarn (os comandos aqui usam `npm`)
