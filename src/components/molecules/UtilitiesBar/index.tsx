@@ -1,5 +1,4 @@
 import UtilityIcon from "../../atoms/UtilityIcon"
-import styles from "./index.module.scss"
 import Delivery from "../../../assets/delivery.svg"
 import Heart from "../../../assets/heart.svg"
 import User from "../../../assets/userCircle.svg"

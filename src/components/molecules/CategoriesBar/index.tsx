@@ -1,6 +1,5 @@
 import styles from './index.module.scss'
 import CategorieItem from '../../atoms/CategorieItem'
-import { act } from 'react'
 
 function CategoriesBar() {
     const categories = [

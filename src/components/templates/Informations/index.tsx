@@ -18,7 +18,7 @@ function Informations() {
     ]
     return (
         <section className={styles.containerInformations}>
-            {infoCardsData.map((card, index) => (
+            {infoCardsData.map((card) => (
                 <InfoCard key={card.id} {...card} />
             ))}
         </section>
