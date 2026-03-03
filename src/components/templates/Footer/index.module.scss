@@ -3,41 +3,46 @@
 .containerFooter {
     width: 100%;
     background-color: #F4F4F4;
-    width: 100%;
-    margin: 0 auto;
-    padding: 42px 0px;
+    padding: 42px 80px;
 
+    @media (max-width: 768px) {
+        padding: 32px 24px;
+    }
 
     .contentFooter {
         display: flex;
         gap: 90px;
-        justify-content: center;
         max-width: 1280px;
         margin: 0 auto;
         justify-content: space-between;
 
+        @media (max-width: 1024px) {
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        hr {
+            color: rgba(40, 40, 40, 0.18);
+        }
+
         .econSocials {
             h4 {
                 padding-top: 18px;
+                max-width: 280px;
+
+                @media (max-width: 768px) {
+                    max-width: 100%;
+                }
             }
 
             .iconSocials {
                 display: flex;
                 gap: 26px;
                 padding-top: 24px;
-            }
-
-            hr {
-                color: rgba(40, 40, 40, 0.18);
-            }
-        }
-
-        .econLinks {
-            display: flex;
-
-            .styles.links {
-                display: flex;
-                flex-direction: column;
             }
         }
     }
