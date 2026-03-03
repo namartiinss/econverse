@@ -1,8 +1,37 @@
-# EconVerse - Teste FrontEnd
+# EconVerse - Teste Técnico Front-End
 
-[Colocar imagem]
+**Deploy:** [https://econverse-iota.vercel.app/](https://econverse-iota.vercel.app/)
 
-Projeto front-end para o teste técnico da Econverse.
+**Preview do Projeto:**
+
+![Banner EconVerse](/public/banner.png)
+
+---
+
+## Métricas de Performance
+
+O projeto foi validado utilizando o **Google PageSpeed Insights**, considerando métricas de desempenho, acessibilidade, boas práticas e SEO.
+
+### Desktop
+
+* **Desempenho:** 99
+* **Acessibilidade:** 87
+* **Boas Práticas:** 100
+* **SEO:** 100
+
+![PageSpeed Desktop](/public/pagespeed-1.png)
+
+---
+
+### Mobile
+
+* **Desempenho:** 80
+* **Acessibilidade:** 87
+* **Boas Práticas:** 96
+* **SEO:** 100
+
+![PageSpeed Mobile](/public/pagespeed.png)
+
 
 **Resumo:**
  - Implementação em React com Vite + TypeScript, estrutura de componentes atômicos/moleculares/organismos e estilização em SCSS.
