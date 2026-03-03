@@ -13,9 +13,10 @@
         transition: .3s ease;
     }
 
-    &:hover{
+    &:hover {
         transform: translateY(-5px);
     }
+
     &:not(.active):hover {
         h3 {
             color: tokens.$color-purple-light;
@@ -26,25 +27,32 @@
         }
     }
 
-
     h3 {
         font-size: 14px;
         font-weight: 600;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     .iconFilter {
         padding: 34px;
         border-radius: 10px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+        @media (max-width: 768px) {
+            padding: 20px;
+        }
+
+        @media (max-width: 480px) {
+            padding: 16px;
+        }
     }
 }
 
 .active {
     h3 {
         color: tokens.$color-purple-light;
-    }
-
-    img:hover {
-        filter: none;
     }
 }
