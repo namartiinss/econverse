@@ -5,14 +5,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1280px;
+    max-width: 1376px;
     margin: 0 auto;
+    position: relative;
+    padding: 0 48px;
+
+    @media (max-width: 768px) {
+        padding: 0 40px;
+    }
 
     :global(.swiper) {
-        max-width: 1280px;
+        width: 100%;
         padding: 24px 10px 90px 10px;
+
+        @media (max-width: 1024px) {
+            :global(.swiper-slide) {
+                width: calc(33.333% - 12px) !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :global(.swiper-slide) {
+                width: calc(50% - 9px) !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :global(.swiper-slide) {
+                width: calc(100%) !important;
+            }
+        }
     }
-    position: relative;
 }
 
 .prevButton, .nextButton {
@@ -24,15 +47,23 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #fff;
     cursor: pointer;
-
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.prevButton{
-    left: -40px;
+    flex-shrink: 0;
 }
 
-.nextButton{
-    right: -40px;
+.prevButton {
+    left: 0;
+    @media(max-width: 768px) {
+        left: 12px;
+    }
+}
+
+.nextButton {
+    right: 0;
+    @media(max-width: 768px) {
+        right: 12px;
+    }
 }

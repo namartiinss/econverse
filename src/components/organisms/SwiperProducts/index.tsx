@@ -1,15 +1,29 @@
 import styles from "./index.module.scss"
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { SwiperRef } from 'swiper/react'
 import ProductCard from '../../molecules/ProductCard'
 import 'swiper/css'
 import { useProducts } from '../../../hooks/useProducts'
 import arrowRight from '../../../assets/arrowRight.svg'
 import arrowLeft from '../../../assets/arrowLeft.svg'
+
 const Carousel = () => {
   const { products } = useProducts()
   const swiperRef = useRef<SwiperRef>(null)
+  const [slidesPerView, setSlidesPerView] = useState(4)
+
+  useEffect(() => {
+    const update = () => {
+      if (window.innerWidth <= 480) setSlidesPerView(1)
+      else if (window.innerWidth <= 768) setSlidesPerView(2)
+      else if (window.innerWidth <= 1024) setSlidesPerView(3)
+      else setSlidesPerView(4)
+    }
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
 
   return (
     <div className={styles.containerCard}>
@@ -19,21 +33,14 @@ const Carousel = () => {
       <button className={styles.nextButton} onClick={() => swiperRef.current?.swiper.slideNext()}>
         <img src={arrowRight} alt="Next" />
       </button>
-
-      <Swiper ref={swiperRef} spaceBetween={18} slidesPerView={4}>
+      <Swiper ref={swiperRef} spaceBetween={18} slidesPerView={slidesPerView}>
         {products.map((product, index) => (
           <SwiperSlide key={index}>
-            <ProductCard
-              productName={product.productName}
-              descriptionShort={product.descriptionShort}
-              photo={product.photo}
-              price={product.price}
-            />
+            <ProductCard {...product} />
           </SwiperSlide>
         ))}
       </Swiper>
     </div>
   )
 }
-
 export default Carousel

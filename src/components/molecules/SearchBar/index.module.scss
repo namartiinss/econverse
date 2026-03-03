@@ -17,6 +17,9 @@
         @media (max-width: 768px) {
             flex-wrap: wrap;
             gap: 12px;
+            input, div {
+                width: 100%;
+            }
         }
 
         .contentUtilities {

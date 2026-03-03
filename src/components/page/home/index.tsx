@@ -10,16 +10,16 @@ import Footer from '../../templates/Footer'
 function Home() {
     return (
         <>
-            {/* <Header />
+            <Header />
             <Hero />
             <Filters />
             <Products hasCategories={true} />
             <Informations />
-            <Products hasCategories={false} />
+            {/* <Products hasCategories={false} /> */}
             <Brands />
-            <Products hasCategories={false} /> */}
+            {/* <Products hasCategories={false} />  */}
             <Newsletter />
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }
